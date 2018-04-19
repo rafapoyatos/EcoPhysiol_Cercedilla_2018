@@ -1,0 +1,70 @@
+---
+title: 'SAPFLUXNET: Una base de datos global de medidas de flujo de savia'
+author: "Rafael Poyatos & Víctor Granda"
+date: "26 de abril de 2018"
+output:
+  ioslides_presentation: default
+  slidy_presentation: default
+  beamer_presentation:
+    theme: "Madrid"
+    colortheme: "dolphin"
+    fonttheme: "structuresmallcapsserif"
+    slide_level: 2
+    fig_caption: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(sapfluxnetr)
+library(dplyr)
+```
+
+## Descripción técnica
+
+> Para poder asegurar la calidad de los datos recibidos necesitamos un control
+  de calidad **semi-automático**, **reproducible** y **robusto**. También
+  necesitamos, por otro lado, almacenar los datos de tal manera que permita el
+  acceso a toda la información (datos y metadatos) para simplificar el proceso.
+
+## Control de calidad
+
+![](qc_summary.svg)
+
+## Almacenamiento de los datos
+
+Toda la información de un sitio (datos de flujo, datos ambientales, metadatos
+de sitio, stand, especies, plantas y ambientales) se combinan en un solo
+objeto, gracias a la clase S4 `sfn_data`:
+
+![](schematics.svg.png)
+
+## Almacenamiento de los datos
+
+Así, es sencillo acceder a los datos de flujo, por ejemplo:
+
+```{r, echo=TRUE}
+read_sfn_data('ARG_MAZ') %>% get_sapf_data()
+```
+
+## Herramientas desarrolladas en el proyecto
+
+Monitorización del Control de Calidad y del progreso del proyecto, gracias
+a aplicaciones `shiny`:
+
+![](tools_shiny.png)
+
+## Herramientas desarrolladas en el proyecto
+
+Paquetes de R para trabajar con los datos
+
+- `sapfluxnetQC1`:  
+  Encargado de toda la parte semi-automática de control de
+  calidad. Destinado a uso interno del proyecto, pero auditable por cualquier
+  interesado (Data contributors, Journal reviewers...):  
+  https://github.com/sapfluxnet/sapfluxnetQC1
+
+- `sapfluxnetr`:  
+  Herramientas y utilidades para el análisis de los datos
+  recopilados en SAPFLUXNET. Destinado al público interesado (Data contributors,
+  Investigadores...) y completamente disponible:  
+  https://github.com/sapfluxnet/sapfluxnetr
