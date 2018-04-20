@@ -19,12 +19,38 @@ library(sapfluxnetr)
 library(dplyr)
 ```
 
+
+## La transpiración como principal flujo evaporativo global
+- La transpiración representa globalmente un ~60% de la ET terrestre.
+(Miralles et al 2011, Wei et al 2017).
+- Los bosques transpiran un ~60% de la ET terrestre (Schlesinger & Jasechko 2014).
+![](global_t_et2.png) {width=80%}
+
+
+## Regulación de la transpiración y resistencia a la sequía
+
+- La regulación de la transpiración es un componente principal de las 
+estrategias para hacer frente a la sequía.
+- Esta regulación, a nivel de planta, se refleja en la magnitud y 
+los patrones temporales del flujo de savia.
+![](plant_drought.png) {width=80%}
+
+## Medida de flujo de savia con métodos térmicos
+
+- El flujo de savia es la medida de los patrones temporales
+del uso de agua, con una mayor representatividad ecológica 
+(especies,poblaciones, tamaños de planta)
+![](sf_methods.png) {width=80%}
+
+## 
+
 ## Descripción técnica
 
 > Para poder asegurar la calidad de los datos recibidos necesitamos un control
   de calidad **semi-automático**, **reproducible** y **robusto**. También
   necesitamos, por otro lado, almacenar los datos de tal manera que permita el
   acceso a toda la información (datos y metadatos) para simplificar el proceso.
+
 
 ## Control de calidad
 
