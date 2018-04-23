@@ -3,8 +3,8 @@ title: 'SAPFLUXNET: Una base de datos global de medidas de flujo de savia'
 author: "Rafael Poyatos & Víctor Granda"
 date: "26 de abril de 2018"
 output:
-  ioslides_presentation: default
   slidy_presentation: default
+  ioslides_presentation: default
   beamer_presentation:
     theme: "Madrid"
     colortheme: "dolphin"
@@ -21,19 +21,15 @@ library(dplyr)
 
 
 ## La transpiración como principal flujo evaporativo global
-- La transpiración representa globalmente un ~60% de la ET terrestre.
-(Miralles et al 2011, Wei et al 2017).
-- Los bosques transpiran un ~60% de la ET terrestre (Schlesinger & Jasechko 2014).
-![](global_t_et2.png) {width=80%}
+- La transpiración representa globalmente un ~60% de la ET terrestre y los bosques transpiran un ~60% de esta ET.
+![](global_t_et2.png) 
 
 
 ## Regulación de la transpiración y resistencia a la sequía
 
-- La regulación de la transpiración es un componente principal de las 
-estrategias para hacer frente a la sequía.
-- Esta regulación, a nivel de planta, se refleja en la magnitud y 
+- La regulación de la transpiración se refleja en la magnitud y 
 los patrones temporales del flujo de savia.
-![](plant_drought.png) {width=80%}
+![](plant_drought.png) 
 
 ## Medida de flujo de savia con métodos térmicos
 
@@ -42,7 +38,10 @@ del uso de agua, con una mayor representatividad ecológica
 (especies,poblaciones, tamaños de planta)
 ![](sf_methods.png) {width=80%}
 
-## 
+## Datos globales de flujo de savia, por qué no?
+
+![](sfn_editorial.png)
+
 
 ## Descripción técnica
 
@@ -94,3 +93,22 @@ Paquetes de R para trabajar con los datos
   recopilados en SAPFLUXNET. Destinado al público interesado (Data contributors,
   Investigadores...) y completamente disponible:  
   https://github.com/sapfluxnet/sapfluxnetr
+  
+  
+## Escalado del uso del agua 
+
+SAPFLUXNET permitirá analizar la variación de la transpiración en función de 
+atributos de la planta (diámetro, área de albura, área foliar).
+
+![](sf_size.png)
+
+
+## Respuestas a la demanda evaporativa
+
+![](vpd_response.png)
+
+
+## Respuestas a la humedad del suelo
+
+![](swc_response.png)
+
